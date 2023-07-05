@@ -17,6 +17,7 @@ func main() {
 	ext, err := entgql.NewExtension(
 		entgql.WithSchemaGenerator(),
 		entgql.WithSchemaPath("./schemas/ent.graphql"),
+		entgql.WithConfigPath("gqlgen.yml"),
 	)
 	if err != nil {
 		log.Fatalf("error building entgql extension,%v", err)
